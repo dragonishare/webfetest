@@ -1,3 +1,4 @@
-# My Awesome Book
+# web前端面试题
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+主要收集一些前端面试题及涉及到的知识点
+
