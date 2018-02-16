@@ -6,9 +6,11 @@
 * [剖析Vue原理&实现双向绑定MVVM](https://segmentfault.com/a/1190000006599500) 
 
 ### 2.Vue和react区别
+[Vue和React对比](http://chping.website/2016/11/28/Vue%E5%92%8CReact%E5%AF%B9%E6%AF%94/)
 * 相同点：
-    * 都用了virtual dom的方式, 性能都很好
+    * 都用了virtual dom的方式, 性能都很好 Virtual DOM
     * ui上都是组件化的写法，开发效率很高
+    * React与Vue都鼓励组件化应用
 * 不同点：
     * Vue的优势是：双向数据绑定，适合不会持续的，小型的web应用，使用vue.js能带来短期内较高的开发效率，当工程规模比较大时双向数据绑定会很难维护
     * react的优势是：单向数据绑定，更适合大型应用和更好的可测试性，Web端和移动端原生APP通吃，更大的生态系统，更多的支持和好用的工具
