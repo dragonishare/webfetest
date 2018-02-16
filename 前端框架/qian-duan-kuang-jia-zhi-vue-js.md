@@ -6,6 +6,7 @@
 * [剖析Vue原理&实现双向绑定MVVM](https://segmentfault.com/a/1190000006599500) 
 
 ### 2.Vue和react区别
+[2017 年比较 Angular、React、Vue 三剑客](https://juejin.im/post/5a0d5df1f265da43062a542f)   
 [Vue和React对比](http://chping.website/2016/11/28/Vue%E5%92%8CReact%E5%AF%B9%E6%AF%94/)
 * 相同点：
     * 都用了virtual dom的方式, 性能都很好 Virtual DOM
