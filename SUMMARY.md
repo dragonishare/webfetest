@@ -6,6 +6,7 @@
   * [html](理论知识/html.md)
   * [CSS](理论知识/CSS.md)
   * [JavaScript](理论知识/JavaScript.md)
+  * [附加问题](理论知识/fu-jia-wen-ti.md)
 * [前端框架](前端框架/README.md)
   * [vue.js](前端框架/qian-duan-kuang-jia-zhi-vue-js.md)
 * [前端工具](前端工具/README.md)
