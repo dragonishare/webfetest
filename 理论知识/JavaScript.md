@@ -119,4 +119,11 @@ document.getElementById('throttle').onScroll = function() {
 
 使用apply和call设置this
 
-### 11.
+### 11. 简单介绍一下promise，他解决了什么问题
+
+Promise，就是一个对象，用来传递异步操作的消息。有三种状态：Pending（进行中）、Resolved（已完成，又称 Fulfilled）和 Rejected（已失败）。
+
+有了 Promise 对象，就可以将异步操作以同步操作的流程表达出来，避免了层层嵌套的回调函数。
+
+### 12.
+
