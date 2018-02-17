@@ -7,6 +7,7 @@
 ### 2. 平时是怎么学新技术的
    看书，mdn,w3cshool,stackoverflow,segmentfault
    
-### 3.
+### 3. 对自己未来的规划是怎样的
+一专多长
 
-
+### 4. 
