@@ -26,7 +26,17 @@ border-box 是ie的怪异盒模型  他的元素宽度等于内容宽度  内容
 * canvas 
 * 新事件 如ondrag onresize
 
-### 4. 
+### 4. 实现两栏布局有哪些方法
+* 1.float，左边浮动，右边margin-left
+* 2.float，左边浮动，右边overflow:hidden
+> 我利用的是创建一个新的BFC（块级格式化上下文）来防止文字环绕的原理来实现的。BFC就是一个相对独立的布局环境，它内部元素的布局不受外面布局的影响。它可以通过以下任何一种方式来创建： 
+float 的值不为 none 
+position 的值不为 static 或者 relative 
+display 的值为 table-cell , table-caption , inline-block , flex , 或者 inline-flex 中的其中一个 
+overflow 的值不为 visible
+* 3.position，左边固定定位，右边margin-left
+* 4.position，左边固定定位，父元素padding-left
+* 5.flex，左边flex:none不放大也不缩小，父元素设置flex，右边自适应
 
 
 
