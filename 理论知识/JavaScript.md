@@ -109,4 +109,14 @@ document.getElementById('throttle').onScroll = function() {
 }
 ```
 
-### 10. 
+### 10. javaScript中的this是什么，有什么用，它的指向是什么
+
+全局代码中的this  是指向全局对象
+
+作为对象的方法调用时指向调用这个函数的对象。
+
+作为构造函数指向新创建的对象
+
+使用apply和call设置this
+
+### 11.
