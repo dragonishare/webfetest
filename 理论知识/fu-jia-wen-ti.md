@@ -96,5 +96,11 @@ tcp传输报文
 服务器处理请求返回http报文
 
 客户端解析渲染页面 （构建DOM树 –> 构建渲染树 –> 布局渲染树：计算盒模型位置和大小 –> 绘制渲染树）
-### 10. 
+### 10. http请求头
+
+get post delete put head options trace connect
+
+OPTIONS：返回服务器针对特定资源所支持的HTTP请求方法
+
+### 11.
 
