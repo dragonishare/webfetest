@@ -43,4 +43,19 @@ sticky:生成粘性定位的元素，容器的位置根据正常文档流计算�
 ### 7.tansition和margin的百分比根据什么计算
 
 transition是相对于自身,margin相对于参照物
-### 8.
+### 8.实现一个秒针绕一点转动的效果
+```css
+ animation: move 60s infinite steps(60); 
+ /*设置旋转的中心点为中间底部*/ 
+  transform-origin: center bottom; 
+/*旋转从0度到360度*/ 
+@keyframes move { 
+    from { 
+        transform: rotate(0deg); 
+    } 
+    to { 
+        transform: rotate(360deg); 
+    } 
+} 
+```
+### 9.
