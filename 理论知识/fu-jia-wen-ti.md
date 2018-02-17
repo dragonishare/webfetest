@@ -113,4 +113,11 @@ OPTIONS：返回服务器针对特定资源所支持的HTTP请求方法
 4.压缩资源 使用gzip压缩js和css文件
 
 5.代码层面 避免使用样式表达式、通配符选择器、样式放在顶部、脚本放在底部
-### 12.
+### 12.如何解决ajax无法后退的问题
+
+HTML5里引入了新的API，即：history.pushState, history.replaceState
+
+可以通过pushState和replaceState接口操作浏览器历史，并且改变当前页面的URL。
+
+onpopstate监听后退
+### 13.
