@@ -38,5 +38,6 @@ overflow 的值不为 visible
 * 4.position，左边固定定位，父元素padding-left
 * 5.flex，左边flex:none不放大也不缩小，父元素设置flex，右边自适应
 
+### 5. 
 
 
