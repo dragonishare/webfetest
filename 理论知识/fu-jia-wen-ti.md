@@ -61,5 +61,11 @@ alert(html);
      } 
 ```
 cors：通过设置Access-Control-Allow-Origin来允许跨域 cors可用ajax发请求获取数据 但是兼容性没有jsonp好 
-### 6.
+### 6.多页面通信有哪些方案，各有什么不同
+
+localstorge在一个标签页里被添加、修改或删除时，都会触发一个storage事件，通过在另一个标签页里监听storage事件，即可得到localstorge存储的值，实现不同标签页之间的通信。
+
+settimeout+cookie
+
+### 7.
 
