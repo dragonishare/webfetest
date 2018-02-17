@@ -94,7 +94,7 @@ document.getElementById("debounce").onScroll = function() {
 函数节流的要点是，声明一个变量当标志位，记录当前代码是否在执行。
 如果空闲，则可以正常触发方法执行。
 如果代码正在执行，则取消这次方法执行，直接return。
-```
+``` javascript
 //函数节流
 var canScroll = true;
 document.getElementById('throttle').onScroll = function() {
@@ -108,3 +108,5 @@ document.getElementById('throttle').onScroll = function() {
                 },300)       
 }
 ```
+
+### 10. 
