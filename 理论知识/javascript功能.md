@@ -10,4 +10,16 @@ var Sub = function(name,age) {
 }
 Sub.prototype = new Super();
 ```
-### 2.
+### 2.深拷贝方案有哪些，手写一个深拷贝
+
+```javascript
+var clone = function(v) {
+  var o = v.constructor === Array ? [] : {};
+  for (var i in v) {
+    o[i] = typeof v[i] === "Object" ? clone(v[i]) : v[i];
+  }
+  return o;
+}
+```
+
+### 3.
