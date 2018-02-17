@@ -1,8 +1,6 @@
 # 附加问题
 > 涉及http,性能优化等
 
-[toc]
-
 ### 1.http响应中content-type包含哪些内容
 请求中的消息主体是用何种方式编码
 * application/x-www-form-urlencoded
