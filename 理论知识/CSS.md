@@ -40,4 +40,7 @@ sticky:生成粘性定位的元素，容器的位置根据正常文档流计算�
 1.css3中的过渡和animation动画都是基于css实现机制的，属于css范畴之内，并没有涉及到任何语言操作。效率略高与jQuery中的animate()函数，但兼容性很差。
 
 2.jQuery中的animate()函数可以简单的理解为css样式的“逐帧动画”，是css样式不同状态的快速切换的结果。效率略低于css3动画执行效率，但是兼容性好。‍
-### 7.
+### 7.tansition和margin的百分比根据什么计算
+
+transition是相对于自身,margin相对于参照物
+### 8.
