@@ -22,4 +22,10 @@ var clone = function(v) {
 }
 ```
 
-### 3.
+### 3.判断数组有哪些方法
+
+a instanceof Array
+a.constructor == Array
+Object.prototype.toString.call(a) == [Object Array]
+
+### 4.
