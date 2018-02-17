@@ -8,4 +8,7 @@
 模块太多
 Webpack 可以配置 externals 来将依赖的库指向全局变量，从而不再打包这个库
 
-### 3.
+### 3.webpack常用到哪些功能
+
+设置入口  设置输出目 设置loader  extract-text-webpack-plugin将css从js代码中抽出并合并 处理图片文字等功能 解析jsx解析bable
+### 4.

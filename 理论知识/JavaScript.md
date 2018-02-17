@@ -199,4 +199,11 @@ Emitter.prototype.trigger = function(eventName) {
     })
 }
 ```
-### 15.
+### 15.setTimeout,setInterval,requestAnimationFrame之间的区别
+
+setInterval如果函数执行的时间很长的话，第二次的函数会放到队列中，等函数执行完再执行第二次，导致时间间隔发生错误。
+
+而settimeout一定是在这个时间定时结束之后,它才会执行
+
+requestAnimationFrame是为了做动画专用的一个方法，这种方法对于dom节点的操作会比较频繁。
+### 16.
