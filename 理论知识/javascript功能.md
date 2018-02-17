@@ -137,4 +137,17 @@ var b = once(test);
 b(); // 'test'
 b(); // nothing
 ```
-### 8.
+### 8.生成10个20-50之间的随机数，存在数组中，常见排序方法，数组乱序方法
+```javascript
+var arr = [];
+for(var i = 0;i<10;i++){
+    var num = Math.random()*30 + 20;
+    num = parseInt(num, 10);
+    arr.push(num);
+}
+　
+arr.sort(function(a,b){
+    return 0.5 - Math.random();
+})
+```
+### 9.
