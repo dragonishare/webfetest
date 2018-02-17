@@ -100,4 +100,23 @@ function getQueryObject(url) {
 getQueryObject("http://www.cnblogs.com/leee/p/4456840.html?name=1&dd=ddd**")
 Object {name: "1", dd: "ddd**"}
 ```
-### 6.
+### 6.两个数组合并成一个数组排序返回
+先依次比较两个数组，按照小的就传入新的数组。当这次比较完之后可能有一个数组的长度很长，留下一些数组，然后在新数组的末尾插入即可。
+```javascript
+functiongetRes(arr1, arr2){
+   var len1 = arr1.length,
+       len2 = arr2.length,
+       i = 0,
+       j = 0,
+       k = 0,
+       res = new Array(len1+len2);
+  
+       while(i < len1 && j <len2){
+res[k++] = arr[(arr[i] > arr[j]) ? j++ : i++];
+}
+While(i < len1)   res[k++]= arr1[i++];
+While(j < len2)   res[k++]= arr2[j++];
+Return res;
+}
+```
+### 7.
