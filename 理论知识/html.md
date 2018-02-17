@@ -38,6 +38,31 @@ overflow 的值不为 visible
 * 4.position，左边固定定位，父元素padding-left
 * 5.flex，左边flex:none不放大也不缩小，父元素设置flex，右边自适应
 
-### 5. 
+### 5. offsetHeight, scrollHeight, clientHeight分别代表什么
+
+clientHeight：包括内容可见部分的高度，可见的padding；不包括border，水平方向的scrollbar，margin。
+
+offsetHeight：包括内容可见部分的高度，border，可见的padding，水平方向的scrollbar（如果存在）；不包括margin。
+
+scrollHeight：包括内容的高度（可见与不可见），padding（可见与不可见）；不包括border，margin。
+
+### 6. 垂直居中
+
+单行行内元素 1.可以设置padding-top,padding-bottom 2.将height和line-height设为相等
+
+多行行内元素 1.可以将元素转为table样式，再设置vertical-align：middle; 2.使用flex布局
+
+块级元素
+
+已知高度绝对定位负边距
+
+未知高度transform: translateY(-50%);
+
+flex布局 
+display: flex;
+justify-content: center;
+align-items: center;
+
+### 7. 
 
 
