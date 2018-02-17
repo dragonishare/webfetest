@@ -54,7 +54,18 @@ get请求可以将查询字符串参数追加到url的末尾; post请求应该�
 get请求数据有大小限制；post没有
 post比get安全性更高
 
-### 5. 
+### 5. cookie和session有什么联系和区别
+
+cookie数据存放在客户的浏览器上，session数据放在服务器上。
+
+session比cookie更安全
+
+单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
+
+一般用cookie来存储sessionid
+
+### 6. 
+
 
 
 
