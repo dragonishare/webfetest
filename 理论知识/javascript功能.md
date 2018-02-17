@@ -13,6 +13,7 @@ Sub.prototype = new Super();
 ### 2.深拷贝方案有哪些，手写一个深拷贝
 
 ```javascript
+//深度克隆
 var clone = function(v) {
   var o = v.constructor === Array ? [] : {};
   for (var i in v) {
@@ -20,6 +21,15 @@ var clone = function(v) {
   }
   return o;
 }
+//浅克隆
+function extendCopy(p) {
+　　　　var c = {};
+　　　　for (var i in p) {
+　　　　　　c[i] = p[i];
+　　　　}
+　　　　c.uber = p;
+　　　　return c;
+　}
 ```
 
 ### 3.判断数组有哪些方法
@@ -150,4 +160,16 @@ arr.sort(function(a,b){
     return 0.5 - Math.random();
 })
 ```
-### 9.
+### 9.事件绑定
+```javascript
+var addEvent = function(e, type, handler, capture ) {
+  if (e.addEventListener) {
+    e.addEventListener(type, handler, capture);
+  } else if (e.attachEvent) {
+    e.attachEvent('on'+type, handler);
+  } else {
+    e['on'+type] = handler;
+  }
+}
+```
+### 10.
