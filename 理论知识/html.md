@@ -14,6 +14,19 @@ content-box 是W3C的标准盒模型 元素宽度=内容宽度+padding+border
 
 border-box 是ie的怪异盒模型  他的元素宽度等于内容宽度  内容宽度包含了padding和border
 
- 比如有时候在元素基础上添加内距padding或border会将布局撑破 但是使用border-box就可以轻松完成
- 
- ### 3. 
+比如有时候在元素基础上添加内距padding或border会将布局撑破 但是使用border-box就可以轻松完成
+
+### 3. 介绍一下HTML5的新特性
+
+* 新的DOCTYPE声明  `<!DOCTYPE html>`
+* 完全支持css3
+* video和audio 
+* 本地存储 
+* 语义化标签
+* canvas 
+* 新事件 如ondrag onresize
+
+### 4. 
+
+
+
