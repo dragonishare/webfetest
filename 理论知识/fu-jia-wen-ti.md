@@ -40,5 +40,25 @@ session比cookie更安全
 
 一般用cookie来存储sessionid
 
-### 5.
+### 5.跨域通信有哪些方案，各有什么不同
+
+JSONP：由于同源策略的限制，XmlHttpRequest只允许请求当前源，script标签没有同源限制
+
+通过动态<script>元素使用，使用时为src指定一个跨域url。回调函数处理JSON数据  兼容性好 不支持post
+
+简述原理与过程：首先在客户端注册一个callback, 然后把callback的名字传给服务器。此时，服务器先生成一个function , function 名字就是传递上来的参数。最后将 json 数据直接以入参的方式，放置到 function 中，这样就生成了一段 js 语法的文档，返回给客户端。客户端浏览器，解析script标签，并执行返回的 javascript 文档，此时数据作为参数，传入到了客户端预先定义好的 callback 函数里
+```javascript
+ <script> 
+  var url = "http://localhost:8080/crcp/rcp/t99eidt/testjson.do?jsonp=callbackfunction";  
+  var script = document.createElement('script');  
+  script.setAttribute('src', url);  //load javascript   
+  document.getElementsByTagName('head')[0].appendChild(script);  
+   
+  //回调函数 
+   function callbackfunction(data){ 
+var html=JSON.stringify(data.RESULTSET); 
+alert(html); 
+     } 
+```
+### 6.
 
