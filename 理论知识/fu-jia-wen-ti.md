@@ -120,4 +120,9 @@ HTML5里引入了新的API，即：history.pushState, history.replaceState
 可以通过pushState和replaceState接口操作浏览器历史，并且改变当前页面的URL。
 
 onpopstate监听后退
-### 13.
+### 13.分域名请求图片的原因和好处
+
+浏览器的并发请求数目限制是针对同一域名的，超过限制数目的请求会被阻塞
+
+浏览器并发请求有个数限制，分域名可以同时并发请求大量图片
+### 14.
