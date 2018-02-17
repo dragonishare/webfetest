@@ -119,4 +119,22 @@ While(j < len2)   res[k++]= arr2[j++];
 Return res;
 }
 ```
-### 7.
+### 7.实现一个once函数
+```javascript
+function test () {console.log('test')}
+ 
+var once = function (fn) {
+  var isFirst = true;
+  return function () {
+    if (isFirst) {
+      isFirst = !isFirst;
+      fn();
+    }
+  };
+};
+ 
+var b = once(test);
+b(); // 'test'
+b(); // nothing
+```
+### 8.
