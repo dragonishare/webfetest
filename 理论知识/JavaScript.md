@@ -140,5 +140,16 @@ Promise，就是一个对象，用来传递异步操作的消息。有三种状�
 * 提高编译器效率，增加运行速度；
 * 为未来新版本的Javascript做好铺垫。
 
-### 13.
+### 13.js的原型链，如何实现继承？
 
+```javascript
+function foo(){}
+foo.prototype.z = 3;
+var obj = new foo();
+obj.x=1;
+obj.y=2;
+obj.x //1
+obj.y //2
+obj.z //3
+```
+### 14.
