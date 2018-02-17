@@ -72,4 +72,39 @@ stack为自动分配的内存空间，它由系统自动释放；而heap则是�
 
 引用类型 存放在堆内存中，首先从栈中获得该对象的地址指针，然后再从堆内存中取得所需的数据
 
-### 9. 
+### 9. 函数防抖和函数节流
+函数防抖是指频繁触发的情况下，只有足够的空闲时间，才执行代码一次
+
+函数防抖的要点，也是需要一个setTimeout来辅助实现。延迟执行需要跑的代码。
+如果方法多次触发，则把上次记录的延迟执行代码用clearTimeout清掉，重新开始。
+如果计时完毕，没有方法进来访问触发，则执行代码。
+
+``` javascript
+//函数防抖
+var timer = false
+document.getElementById("debounce").onScroll = function() {
+        clearTimeout(timer)  
+        timer = setTimeout(function(){
+                console.log(‘函数防抖’) 
+  }, 300)     
+}
+```
+函数节流是指一定时间内js方法只跑一次
+
+函数节流的要点是，声明一个变量当标志位，记录当前代码是否在执行。
+如果空闲，则可以正常触发方法执行。
+如果代码正在执行，则取消这次方法执行，直接return。
+```
+//函数节流
+var canScroll = true;
+document.getElementById('throttle').onScroll = function() {
+               if (!canScroll) {
+                return;
+               }
+                canScroll = false;
+                setTimeout(function(){
+                   console.log('函数节流');
+                   canScroll = true;
+                },300)       
+}
+```
