@@ -60,5 +60,6 @@ var html=JSON.stringify(data.RESULTSET);
 alert(html); 
      } 
 ```
+cors：通过设置Access-Control-Allow-Origin来允许跨域 cors可用ajax发请求获取数据 但是兼容性没有jsonp好 
 ### 6.
 
