@@ -102,5 +102,15 @@ get post delete put head options trace connect
 
 OPTIONS：返回服务器针对特定资源所支持的HTTP请求方法
 
-### 11.
+### 11.前端性能优化
 
+1.减少http请求 使用sprite图、合并js和css文件
+
+2.使用cdn 将用户安排在近的服务器上
+
+3.使用缓存 缓存ajax 使用外部的css和js以便缓存 使用expire cach-control etag
+
+4.压缩资源 使用gzip压缩js和css文件
+
+5.代码层面 避免使用样式表达式、通配符选择器、样式放在顶部、脚本放在底部
+### 12.

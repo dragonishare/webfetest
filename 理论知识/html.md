@@ -63,6 +63,43 @@ display: flex;
 justify-content: center;
 align-items: center;
 
-### 7. 
+### 7. 清除浮动
+两种原理：
 
+1、利用clear属性进行清理
 
+具体的实现原理是通过引入清除区域，这个相当于加了一块看不见的框把定义clear属性的元素向下挤
+父容器结尾插入空标签`<div style="clear: both;"></div>`
+
+利用CSS伪元素：
+```css
+.clearfix:after {
+  content: ".";
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both;
+}
+```
+通过将这个类添加到父容器当中，会在父容器的末尾增加了一个高度为0、具有清除属性的、不可见的块级元素。
+2、将父容器形成BFC
+
+BFC能清理浮动主要运用的是它的布局规则：
+
+内部的Box会在垂直方向，一个接一个地放置。
+Box垂直方向的距离由margin决定。属于同一个BFC的两个相邻Box的margin会发生重叠
+每个元素的margin box的左边， 与包含块border box的左边相接触(对于从左往右的格式化，否则相反)。即使存在浮动也是如此。
+BFC的区域不会与float box重叠。
+BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素。反之也如此。
+计算BFC的高度时，浮动元素也参与计算
+浮动清理利用的主要是第六条规则，只要将父容器触发为BFC，就可以实现包含的效果。
+
+那么触发BFC有哪几种方法？
+
+* 根元素
+* float属性不为none
+* position为absolute或fixed
+* display为inline-block, table-cell, table-caption, flex, inline-* flex
+* overflow不为visible
+
+### 8.

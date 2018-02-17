@@ -152,4 +152,51 @@ obj.x //1
 obj.y //2
 obj.z //3
 ```
-### 14.
+### 14.事件模型和事件代理
+事件三个阶段：事件捕获，目标，事件冒泡（低版本ie不支持捕获阶段）
+
+w3c绑定事件target.addEventListener(event,handler,false)
+
+解绑target.removeEventListener(eventType, handler, false)
+
+ie绑定 target.attachEvent(on+event, handler)
+
+解绑target.detachEvent("on"+eventType, handler)
+
+事件代理优点：
+
+可以大量节省内存占用，减少事件注册，比如在table上代理所有td的click事件就非常棒
+
+可以实现当新增子对象时无需再次对其绑定事件，**对于动态内容部分尤为合适**
+
+bind和trigger实现：
+
+创建一个类或是匿名函数，在bind和trigger函数外层作用域创建一个字典对象，用于存储注册的事件及响应函数列表，bind时，如果字典没有则创建一个，key是事件名称，value是数组，里面放着当前注册的响应函数，如果字段中有，那么就直接push到数组即可。trigger时调出来依次触发事件响应函数即可。
+```javascript
+function Emitter() {
+    this._listener = [];//_listener[自定义的事件名] = [所用执行的匿名函数1, 所用执行的匿名函数2]
+}
+  
+//注册事件
+Emitter.prototype.bind = function(eventName, callback) {
+    var listener = this._listener[eventName] || [];//this._listener[eventName]没有值则将listener定义为[](数组)。
+    listener.push(callback);
+    this._listener[eventName] = listener;
+}
+  
+ //触发事件
+Emitter.prototype.trigger = function(eventName) {
+    var args = Array.prototype.slice.apply(arguments).slice(1);//atgs为获得除了eventName后面的参数(注册事件的参数)
+    var listener = this._listener[eventName];
+  
+    if(!Array.isArray(listener)) return;//自定义事件名不存在
+    listener.forEach(function(callback) {
+        try {
+            callback.apply(this, args);
+        }catch(e) {
+            console.error(e);
+        }
+    })
+}
+```
+### 15.
