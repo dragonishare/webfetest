@@ -167,5 +167,10 @@ IOS移动端click事件300ms的延迟响应
 ### 19.Windows系统中的ping命令是基于哪种协议实现的
 TCP/IP所属的ICMP协议
 ICMP是一个“错误侦测与回报机制”，其目的是检测网路的连线状况﹐也能确保连线的准确性。
-### 20.
-
+### 20.浏览器内核
+* **Blink: **在Chrome（28及往后版本）、Opera（15及往后版本）使用
+* **Webkit**: safari
+* **Gecko**: firefox
+* **Trident**: ie内核到IE11
+* **Edge**: edge
+* **Presto**: Opera已废弃
