@@ -9,10 +9,11 @@
 另一方面，便于与他人的协作，他人通过读代码就可以理解你网页标签的意义。
 
 ### 2.说说content-box和border-box，为什么看起来content-box更合理，但是还是经常使用border-box
+盒子模型分为两类：W3C标准盒子模型和IE盒子模型 通过css中box-sizing设置
 
-content-box 是W3C的标准盒模型 元素宽度=内容宽度(width)+padding+border
+* content-box 是W3C的标准盒模型 元素宽度=内容宽度(width)+padding+border
 
-border-box 是ie的怪异盒模型  他的元素宽度等于内容宽度(width)  内容宽度包含了padding和border
+* border-box 是ie的怪异盒模型  他的元素宽度等于内容宽度(width)  内容宽度包含了padding和border
 
 比如有时候在元素基础上添加内距padding或border会将布局撑破 但是使用border-box就可以轻松完成
 
