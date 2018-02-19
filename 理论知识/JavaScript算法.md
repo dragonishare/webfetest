@@ -134,4 +134,35 @@ function wideTraversal(node) {
    return nodes;
 }
 ```
-### 7.
+### 7.深度优先遍历的递归写法
+```javascript
+function deepTraversal(node) {
+    var nodes = [];
+    if (node != null) {  
+            nodes.push(node);  
+            var children = node.children;  
+            for (var i = 0; i < children.length; i++)  
+                   deepTraversal(children[i]);  
+        }  
+    return nodes;
+}
+```
+### 8.深度优先遍历的非递归写法
+```javascript
+function deepTraversal(node) {
+    var nodes = [];
+    if (node != null) {
+        var stack = [];
+        stack.push(node);
+        while (stack.length != 0) {
+            var item = stack.pop();
+            nodes.push(item);
+            var children = item.children;
+            for (var i = children.length - 1; i >= 0; i--)
+                stack.push(children[i]);
+        }
+    }  
+    return nodes;
+}
+```
+### 9.
