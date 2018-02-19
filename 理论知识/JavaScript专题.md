@@ -63,7 +63,30 @@ var student = {
 student.sayName(); // 输出Tom
 ```
 作为方法调用时，this指方法所属的对象。
-#### 3.
+#### 3.call和apply方法：调用时指定this
+除了上述两种固定的情况外，Javascript提供了一种可以随心所欲地根据需要更改函数中this方法。即使用函数对象的call或apply方法来调用函数，显然这种方式给编程带来了极大的灵活性。
+```javascript
+//示例：
+function fn() {
+    var args = Array. prototype. slice.call(arguments, 1);
+    console.log(args);
+}
 
+fn(1, 2, 3); // 输出[2, 3]
+```
+这种方法常用的场景就是：把一个对象的方法"借"给另一个具有类似结构的对象使用。
+#### 4. bind方法：重新绑定函数的this
+与call和apply不同，bind方法是在调用前就把函数内的this绑定了，而且一旦绑定就不能再改变。实际上bind方法返回了一个原函数的新版本。
+```javascript
+//示例：
+function fn() {
+    console.log(this.age);
+}
 
+var fn2 = fn.bind({age: 18});
+fn2() // 输出18
+fn2.call({age: 25}) // 输出18
+```
+通过bind得到的函数，不论用哪种方式调用，它的this都是相同的。
+#### 5.
 
