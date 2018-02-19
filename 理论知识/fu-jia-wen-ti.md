@@ -44,7 +44,7 @@ session比cookie更安全
 
 区别：cookies缓存 sessionStorage会话存储 localStorage本地存储
 
-* 1.cookies存储在http信息的实体中，http每次请求都会携带cookie, cookie在浏览器和服务器间来回传递， 后两者仅在本地保存
+* 1.cookies存储在http信息的实体中，http每次请求都会携带cookie, cookie在浏览器和服务器间来回传递，后两者仅在本地保存
 
 * 2.存储大小：cookie数据不能超过4k; 后两者要大很多，可以达到5M；
 
