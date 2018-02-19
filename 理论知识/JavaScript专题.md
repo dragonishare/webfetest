@@ -88,5 +88,19 @@ fn2() // 输出18
 fn2.call({age: 25}) // 输出18
 ```
 通过bind得到的函数，不论用哪种方式调用，它的this都是相同的。
-#### 5.
+**小结**：函数中的this是由调用函数的方式决定的。同一个函数，调用它的方式不同，那么它内部的this就可能不同。换句话说，this是动态决定的。
+#### 5. 构造函数中的this
+当构造函数通过new操作符来调用时，this表示正在创建的对象。
+```javascript
+//示例：
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
 
+var jerry = new Person('Jerry', 12);
+
+console.log(jerry.age); // 输出12
+```
+正因为这个原因，我们可以在构造函数中通过this给实例添加属性。
+#### 6.
