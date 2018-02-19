@@ -39,6 +39,18 @@ session比cookie更安全
 单个cookie保存的数据不能超过4K，很多浏览器都限制一个站点最多保存20个cookie。
 
 一般用cookie来存储sessionid
+### 4.1 请描述cookies、sessionStorage 和 localStorage 的区别?
+共同点：都是保存在浏览器端
+
+区别：cookies缓存 sessionStorage会话存储 localStorage本地存储
+
+* 1.cookies存储在http信息的实体中，http每次请求都会携带cookie, cookie在浏览器和服务器间来回传递， 后两者仅在本地保存
+
+* 2.存储大小：cookie数据不能超过4k; 后两者要大很多，可以达到5M；
+
+* 3.有效期：cookie在设置的cookie有效期之前有效，即使浏览器或窗口关闭；sessionStorage仅在当前浏览器窗口关闭前有效，不可持久保存；localSorage始终有效，窗口或浏览器关闭也一直保存，可做持久数据；
+
+* 4.作用域：cookie、localStorage在所有的同源窗口中都是共享的；sessionStorage只能在当前页面使用。
 
 ### 5.跨域通信有哪些方案，各有什么不同
 
