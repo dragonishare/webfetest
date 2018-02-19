@@ -102,4 +102,22 @@ var search = function(str) {
   console.log(max, char);
 }
 ```
-### 5.
+### 5.广度优先遍历的非递归写法
+```javascript
+function wideTraversal(selectNode) {
+   var nodes = [];
+   if (selectNode != null) {
+     var queue = [];
+     queue.unshift(selectNode);
+     while (queue.length != 0) {
+        var item = queue.shift();
+            nodes.push(item);
+            var children = item.children;
+            for (var i = 0; i < children.length; i++)
+                queue.push(children[i]);
+      }
+   }
+   return nodes;
+}
+```
+### 6.
