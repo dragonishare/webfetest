@@ -120,4 +120,18 @@ function wideTraversal(selectNode) {
    return nodes;
 }
 ```
-### 6.
+### 6.广度优先遍历的递归写法：
+```javascript
+function wideTraversal(node) {
+   var nodes = [];
+   var i = 0;
+   if (!(node == null)) {
+     nodes.push(node);
+     wideTraversal(node.nextElementSibling);
+     node = nodes[i++];
+     wideTraversal(node.firstElementChild);
+   }
+   return nodes;
+}
+```
+### 7.
