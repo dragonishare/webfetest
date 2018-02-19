@@ -58,4 +58,15 @@ transition是相对于自身,margin相对于参照物
     } 
 } 
 ```
-### 9.
+### 9.CSS实现垂直水平居中
+**宽高不固定:**
+* **1.flex** 给父容器设置dispaly: flex; justify-content: center; align-items: center
+
+* **2.绝对定位居中** 父元素position:relative,子元素position:absolute;top:0;right:0;bottom:0;left:0;margin:auto; 
+
+**子元素宽高固定:**
+* **3.负边距居中** 父元素position:relative,子元素position:absolute;top:50%;left:50%;margin-top:-子元素高度/2;margin-left:-子元素宽度/2; 
+
+* **4.transform** 原理同3，把margin换成transform: translate(-50%, -50%)
+
+### 10.
