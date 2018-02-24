@@ -45,6 +45,16 @@
 * 熟悉Node.js，开发过Web应用（基于Express）
 * 掌握MySQL数据库的使用   
 * 能使用Photoshop进行简单的图片处理和平面设计。
+* html
+> 深刻理解Web标准
+  熟练运用html标签
+  熟悉xml及xhtml标记语言
+  掌握html5如SVG，localstorage新特性
+* css
+> 熟练运用css及css3新属性
+  注重浏览器兼容性，熟悉常见的css hack（兼容至IE8）
+  掌握bootstrap框架及源码的实现
+  掌握css预编译器Less及Sass
 
 # 其他
 * 控件本质
