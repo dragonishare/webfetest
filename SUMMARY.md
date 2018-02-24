@@ -16,4 +16,5 @@
 * [前端工具](前端工具/README.md)
   * [webpack](前端工具/webpack.md)
 * [开放性问题](kai-fang-xing-wen-ti.md)
+* [简历模板](jian-li-mo-ban.md)
 
