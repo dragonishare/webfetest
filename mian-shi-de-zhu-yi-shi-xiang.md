@@ -55,6 +55,11 @@
   注重浏览器兼容性，熟悉常见的css hack（兼容至IE8）
   掌握bootstrap框架及源码的实现
   掌握css预编译器Less及Sass
+* JavaScript
+> 掌握jQuery
+  掌握原生JS的编程
+  注重JavaScript性能优化
+  正在学习ES6
 
 # 其他
 * 控件本质
